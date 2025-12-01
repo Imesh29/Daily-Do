@@ -1,0 +1,25 @@
+{
+  "name": "daily-do",
+  "version": "1.0.0",
+  "description": "A simple and efficient backend Todo List API built using Node.js and Express.js. It supports task creation, updating, deletion, and retrieval with clean RESTful endpoints.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imesh29/Daily-Do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Imesh29/Daily-Do/issues"
+  },
+  "homepage": "https://github.com/Imesh29/Daily-Do#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0"
+  }
+}
