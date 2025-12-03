@@ -33,5 +33,15 @@ router.post("/",async (req,res) => {
     res.status(201).json(newTodo);
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const todos = await Todo.find(); // fetch all documents from Todo collection
+    res.status(200).json(todos);
+  } catch (error) {
+    res.status(500).json({ message: "Server error", error });
+  }
+});
+
+
 
 module.exports = router;
