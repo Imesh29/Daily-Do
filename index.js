@@ -1,6 +1,5 @@
-const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
+const app = require("./app");
 
 const todoRouter = require('./routes/users');
 
@@ -15,4 +14,4 @@ app.use("/api/todo",todoRouter);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>{
     console.log(`Server is runnig on port ${PORT}...`);
-})
+});
