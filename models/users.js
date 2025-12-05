@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const todoSchenma = new mongoose.Schema({
     task: { type: String, required: true, minlength:5},
-    tags: {type: [String],enum: ["NodeJS", "Javascript", "CSS", "REACT"]},
+    tags: {type: [String],enum: ["NodeJS", "Javascript", "CSS", "REACT","MongoDB"]},
     status: {type: String, required: "true", minlength: 3},
 });
 
