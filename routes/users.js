@@ -73,7 +73,23 @@ router.put("/:id",async (req,res) =>{
     }catch(err){
         res.status(500).json({message: "Server error!!",err});
     }
-})
+});
+
+router.delete("/:id",async(req,res) =>{
+    try{
+        const todo = await Todo.findById(req.params.id);
+
+        if(!todo){
+            return res.status(404).json({message:"todo not found!!"});
+        }
+
+        await todo.deleteOne();
+
+        res.status(200).json({ message: "Todo deleted!" });
+    }catch(err){
+        res.status(500).json({message: "Server error!!",err});
+    }
+});
 
 
 module.exports = router;
