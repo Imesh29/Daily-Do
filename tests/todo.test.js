@@ -17,3 +17,14 @@ beforeAll(async () => {
         useUnifiedTopology: true,
     });
 });
+
+// Clean database after each test
+afterEach(async () => {
+  await Todo.deleteMany();
+});
+
+// Disconnect after all tests
+afterAll(async () => {
+  await mongoose.disconnect();
+  await mongoServer.stop();
+});
