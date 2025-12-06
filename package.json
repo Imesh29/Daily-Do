@@ -4,7 +4,7 @@
   "description": "A simple and efficient backend Todo List API built using Node.js and Express.js. It supports task creation, updating, deletion, and retrieval with clean RESTful endpoints.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "dependencies": {
     "express": "^5.1.0",
     "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
   }
 }
